@@ -1,3 +1,4 @@
+import "./index.css"
 import { FormEvent, useState } from "react"
 import { Button } from "./components/ui/button"
 import { Input } from "./components/ui/input"
@@ -13,8 +14,8 @@ function App() {
     setIsOpen(true);
   }
 
-  return <div>
-    <form onSubmit={onSubmit}>
+  return <div className="container">
+    <form onSubmit={onSubmit} className="flex flex-col gap-2 py-5">
       <Input type="text" value={name} onChange={e => setName(e.currentTarget.value)} placeholder="input your name" />
       <Button type="submit">submit</Button>
     </form>
